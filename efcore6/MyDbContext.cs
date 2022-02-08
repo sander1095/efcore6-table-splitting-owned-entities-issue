@@ -14,11 +14,11 @@ namespace efcore6
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             var abstractEntitiesMap = new EntityTypeMappings();
-            abstractEntitiesMap.ConfigureDerivedClasses(modelBuilder);
 
             modelBuilder.ApplyConfiguration(abstractEntitiesMap);
-
             modelBuilder.ApplyConfiguration(new FooEntityMap());
+
+            abstractEntitiesMap.ConfigureDerivedClasses(modelBuilder);
 
             base.OnModelCreating(modelBuilder);
         }
