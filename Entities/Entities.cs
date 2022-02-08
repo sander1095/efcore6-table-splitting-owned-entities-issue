@@ -32,7 +32,7 @@ namespace Entities
 
     public class OwnedType
     {
-        public int Something { get; set; }
+        public int SomePropertyInOwnedType { get; set; }
     }
 
     public class FooEntity

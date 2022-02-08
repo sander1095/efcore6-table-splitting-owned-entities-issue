@@ -33,8 +33,8 @@ namespace efcore6
             modelBuilder.Entity<DerivedDerivedClass>()
                 .OwnsOne(d => d.OwnedType, navigationBuilder =>
                 {
-                    navigationBuilder.Property(x => x.Something)
-                        .HasColumnName("Something")
+                    navigationBuilder.Property(x => x.SomePropertyInOwnedType)
+                        .HasColumnName("SomePropertyInOwnedType")
                         .IsRequired();
                 })
                 .Property(x => x.JustSomePropertyInDerivedDerivedClass)
@@ -43,8 +43,8 @@ namespace efcore6
             modelBuilder.Entity<DerivedClass>()
                 .OwnsOne(d => d.OwnedType, navigationBuilder =>
                 {
-                    navigationBuilder.Property(x => x.Something)
-                        .HasColumnName("Something")
+                    navigationBuilder.Property(x => x.SomePropertyInOwnedType)
+                        .HasColumnName("SomePropertyInOwnedType")
                         .IsRequired();
                 });
         }
