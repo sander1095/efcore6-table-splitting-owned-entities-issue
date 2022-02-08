@@ -7,7 +7,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<MyDbContext>(opts =>
-    opts.UseSqlServer("Data Source=.;database=TempDb;Trusted_Connection=true"));
+    opts.UseSqlServer("Data Source=.;database=TempDb2;Trusted_Connection=true"));
 
 var app = builder.Build();
 
