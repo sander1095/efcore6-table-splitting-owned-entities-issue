@@ -1,4 +1,4 @@
-using efcore6_table_splitting_owned_entities_issue;
+using efcore6;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

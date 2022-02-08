@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace efcore6_table_splitting_owned_entities_issue
+namespace Entities
 {
     public abstract class AbstractBaseClass
     {

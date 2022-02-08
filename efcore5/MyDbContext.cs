@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Entities;
+using Microsoft.EntityFrameworkCore;
 
-namespace efcore6_table_splitting_owned_entities_issue
+namespace efcore5
 {
     public class MyDbContext : DbContext
     {
@@ -12,7 +13,7 @@ namespace efcore6_table_splitting_owned_entities_issue
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var abstractEntitiesMap = new AbstractBaseClassMap();
+            var abstractEntitiesMap = new EntityTypeMappings();
             abstractEntitiesMap.ConfigureDerivedClasses(modelBuilder);
 
             modelBuilder.ApplyConfiguration(abstractEntitiesMap);
